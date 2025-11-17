@@ -34,3 +34,7 @@ def archive(request, year):
 
 def page_not_found(request, exception):
 	return HttpResponseNotFound('Страница не найдена')
+
+
+def about(request):
+	return render(request, 'women/index.html')
