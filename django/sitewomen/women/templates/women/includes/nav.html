@@ -1,0 +1,16 @@
+{% load women_tags %}
+
+<aside class="left-side-box">
+	{% getcats as categories  %}
+	<ul>
+	{% for cat in categories %}
+		<li><a href="{% url 'category' cat.id %}">{{cat.name}}</a></li>
+	{% endfor %}
+	</ul>
+	<nav>
+		<a href="#">Все категории</a>
+		<a href="#">Актрисы</a> 
+		<a href="#">Певицы</a>  
+		<a href="#">Спортсменки</a>
+	</nav>
+</aside>	
